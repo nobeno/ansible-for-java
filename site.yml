@@ -1,0 +1,5 @@
+- name: mysqlインストール
+  hosts: all
+  roles: 
+    - mysql
+  
