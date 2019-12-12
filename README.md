@@ -1,1 +1,3 @@
-# ansible-test
+# ansible-for-java
+
+- javaデプロイ準備用
