@@ -1,0 +1,15 @@
+- name: Tomcatインストール
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - tomcat
+      - tomcat-webapps
+      - tomcat-admin-webapps
+  become: yes
+  become_user: root
+
+- name: Tomcat起動
+  command: systemctl start tomcat
+  become: yes
+  become_user: root
