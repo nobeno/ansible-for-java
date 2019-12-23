@@ -1,0 +1,11 @@
+- name: Javaインスール済みか確認
+  shell: "java -version"
+  register: java_exists
+  changed_when: False
+  ignore_errors: yes
+
+- name: Install Java 1.8
+  yum:
+    name: java-1.8.0-openjdk-devel
+    state: present
+  when: java_exists
